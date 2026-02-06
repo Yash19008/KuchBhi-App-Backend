@@ -1,9 +1,7 @@
-import { Controller, Get } from '@nestjs/common';
+import { Module } from '@nestjs/common';
+import { HealthController } from './health.controller';
 
-@Controller('health')
-export class HealthController {
-    @Get()
-    check() {
-        return { status: 'ok', service: 'kuchbhi-backend' };
-    }
-}
+@Module({
+    controllers: [HealthController],
+})
+export class HealthModule { }
