@@ -4,11 +4,16 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
 import { AuthService } from './auth.service';
 import { AuthController } from './auth.controller';
 import { UsersModule } from '../users/users.module';
+import { OtpModule } from '../otp/otp.module';
+import { MailModule } from '../mail/mail.module';
 import { StringValue } from 'ms';
+import { JwtStrategy } from './strategies/jwt.strategy';
 
 @Module({
     imports: [
         UsersModule,
+        OtpModule,
+        MailModule,
         ConfigModule,
         JwtModule.registerAsync({
             imports: [ConfigModule],
@@ -23,6 +28,6 @@ import { StringValue } from 'ms';
         }),
     ],
     controllers: [AuthController],
-    providers: [AuthService],
+    providers: [AuthService, JwtStrategy],
 })
 export class AuthModule { }

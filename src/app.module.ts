@@ -10,6 +10,7 @@ import { AffiliateModule } from './modules/affiliate/affiliate.module';
 import { AnalyticsModule } from './modules/analytics/analytics.module';
 import { AdminModule } from './modules/admin/admin.module';
 import { HealthModule } from './modules/health/health.module';
+import { OtpModule } from './modules/otp/otp.module';
 
 @Module({
   imports: [
@@ -26,6 +27,7 @@ import { HealthModule } from './modules/health/health.module';
     AnalyticsModule,
     AdminModule,
     HealthModule,
+    OtpModule,
   ],
 })
 export class AppModule { }
