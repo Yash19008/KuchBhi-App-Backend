@@ -11,6 +11,7 @@ export class UsersService {
         private userModel: Model<UserDocument>,
     ) { }
 
+    // User Creation on Auth
     async createUser(dto: CreateUserDto): Promise<UserDocument> {
         const existingUser = await this.userModel.findOne({ email: dto.email });
         if (existingUser) return existingUser;
