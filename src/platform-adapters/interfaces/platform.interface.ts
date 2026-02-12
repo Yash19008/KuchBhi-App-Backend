@@ -15,3 +15,6 @@ export interface PlatformAdapter {
     getTrending(): Promise<PlatformOffer[]>;
     getOffersByProductKey?(productKey: string): Promise<PlatformOffer[]>;
 }
+
+
+// TODO
