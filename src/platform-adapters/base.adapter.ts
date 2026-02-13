@@ -10,3 +10,5 @@ export abstract class BasePlatformAdapter implements PlatformAdapter {
         return Number(value);
     }
 }
+
+// TODO MORE
