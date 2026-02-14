@@ -17,3 +17,6 @@ export interface PlatformOffer {
 
     metadata?: Record<string, any>; // platform-specific (optional)
 }
+
+// Platform Product Details
+// base data
